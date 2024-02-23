@@ -6,9 +6,11 @@ from .views import (
     add_to_cart,
     get_cart_items,
     remove_from_cart,
+    index,
 )
 
 urlpatterns = [
+    path("", index, name="index"),
     path("products/", get_all_products, name="get_all_products"),
     path("products/<int:id>/", get_product_details, name="get_product_details"),
     path("cart/", get_cart_items, name="get_cart_items"),
