@@ -12,15 +12,16 @@ Follow these steps to set up and run the project locally:
 
    ```bash
    git clone https://github.com/yourusername/your-repo.git
-cd your-repo
+   cd your-repo
+   ```
 
 Create and activate a virtual environment:
 python -m venv venv
-source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+source venv/bin/activate # On Windows, use `venv\Scripts\activate`
 
 Create and activate a virtual environment:
 python -m venv venv
-for mac/linux -> source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+for mac/linux -> source venv/bin/activate # On Windows, use `venv\Scripts\activate`
 
 Install dependencies:
 pip install -r requirements.txt
@@ -35,21 +36,19 @@ POST /cart: Adds a product to the cart. Send data in the request body (e.g., {"p
 GET /cart: Retrieves the cart items.
 DELETE /cart/<id>: Removes a specific item from the cart.
 
-You can create sample data using the Django shell:
-python manage.py shell
+You can create data using :
+python py_client/create.py
 
-in the shell:
-from ecommerce_app.models import Product
+You can read data using :
+python py_client/read.py
 
-# Create sample products
-Product.objects.create(name='Product 1', description='Description 1', price=10.99, image_url='https://example.com/image1.jpg')
-Product.objects.create(name='Product 2', description='Description 2', price=19.99, image_url='https://example.com/image2.jpg')
-# Add more products as needed
+You can update data using :
+python py_client/update.py
+
+You can delete data using :
+python py_client/delete.py
 
 Contributing
 Feel free to contribute to this project by opening issues or pull requests.
 
 This project is licensed under the MIT License.
-
-
-
